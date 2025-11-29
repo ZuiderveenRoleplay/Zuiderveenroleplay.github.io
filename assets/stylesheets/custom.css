@@ -1,0 +1,115 @@
+/* Custom styling voor ZuiderVeen Roleplay - Modern touches */
+
+:root {
+  --zv-geel: #ddff33;
+  --zv-geel-donker: #9fc000;
+  --zv-zwart: #242424;
+  --zv-grijs: #2c2c2c;
+  --zv-lichtgrijs: #eeeeee;
+  --zv-rood: #ff3333;
+  --zv-orange: #ff8833;
+  
+  --md-primary-fg-color: var(--zv-zwart);
+  --md-primary-fg-color--light: var(--zv-grijs);
+  --md-primary-fg-color--dark: #1a1a1a;
+  --md-accent-fg-color: var(--zv-geel);
+  --md-default-bg-color: #fafafa;
+}
+
+/* Subtiele schaduw op header */
+.md-header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  background-color: var(--zv-geel-donker) !important;
+}
+
+/* Afgeronde hoeken voor content blokken */
+.md-content__inner {
+  border-radius: 8px;
+}
+
+/* Moderne tabel styling */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+table thead {
+  background: linear-gradient(135deg, var(--zv-zwart), var(--zv-grijs));
+}
+
+table thead th {
+  color: white;
+  font-weight: 500;
+  padding: 12px 16px;
+}
+
+table tbody tr:hover {
+  background-color: rgba(221, 255, 51, 0.08);
+}
+
+table tbody td {
+  padding: 10px 16px;
+}
+
+/* Subtiele hover op navigatie items */
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+  transition: color 0.2s ease;
+}
+
+/* Artikel headers styling */
+h3 strong {
+  color: var(--zv-geel-donker);
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 4px solid var(--zv-geel);
+  background: rgba(221, 255, 51, 0.08);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+/* Lijst items met betere spacing */
+.md-typeset ul li,
+.md-typeset ol li {
+  margin-bottom: 6px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sidebar styling */
+.md-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-primary-fg-color--light) transparent;
+}
+
+/* Focus states voor accessibility */
+a:focus-visible {
+  outline: 2px solid var(--zv-geel);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Dark mode aanpassingen */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--zv-zwart);
+  --md-default-fg-color: var(--zv-lichtgrijs);
+}
+
+[data-md-color-scheme="slate"] table thead {
+  background: linear-gradient(135deg, var(--zv-grijs), #3a3a3a);
+}
+
+[data-md-color-scheme="slate"] blockquote {
+  background: rgba(221, 255, 51, 0.1);
+}
+
+[data-md-color-scheme="slate"] h3 strong {
+  color: var(--zv-geel);
+}
